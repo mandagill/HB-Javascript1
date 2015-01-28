@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Javascript Learning</title>
+</head>
+
+
+<body>
+  <h1>Javascript Learning</h1>
+    <script>
+    function isEven (aNumber) {
+      return (aNumber % 2 == 0);
+    }
+
+    function fibonacciSet (maxLimit) {
+
+      var currentFibNumber = 1
+      var fibList = [1, 1];
+      for (var i = 0; i < (maxLimit - 2); i++) {
+        currentFibNumber = (fibList[i + 1] + fibList[i]);
+        fibList.push(currentFibNumber);
+        console.log(fibList);
+      }
+    }
+
+    fibonacciSet(50);
+    </script>
+</body>
+
+
+
+
+
+</html>
