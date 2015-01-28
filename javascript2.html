@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-
+<!-- Requirements here: https://github.com/hackbrightacademy/Javascript1/blob/master/ex02.md
+ -->
 <html>
 
 <head>
@@ -11,7 +12,7 @@
   <h1>Javascript Learning</h1>
     <script>
     function isEven (aNumber) {
-      return (aNumber % 2 == 0);
+      return (aNumber % 2 === 0);
     }
 
     function fibonacciSet (maxLimit) {
@@ -21,13 +22,28 @@
       for (var i = 0; i < (maxLimit - 2); i++) {
         currentFibNumber = (fibList[i + 1] + fibList[i]);
         fibList.push(currentFibNumber);
-        console.log(fibList);
+        // console.log(fibList);
+      } return fibList;
+    } 
+
+    function addEvens (aNumberList) {
+      var sumOfEvens = 0;
+      for (var i = 0; i < aNumberList.length; i++) { 
+        if (isEven(aNumberList[i]) === true) {
+          sumOfEvens += aNumberList[i];
+        }
       }
+
+      console.log(sumOfEvens);
+
     }
 
-    fibonacciSet(50);
+    listOfFibs = fibonacciSet(4000000);
+    addEvens(listOfFibs);
+
     </script>
 </body>
+
 
 
 
