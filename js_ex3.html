@@ -7,21 +7,20 @@
   <script>
 
     var hackbrightStudents = ["katie", "amy", "jenny", "katie", "kelley", "katie", "amy"];
+    
     var duplicateStudents = [];
 
     hackbrightStudents.sort();
+    howLongToIterate = hackbrightStudents.length;
 
-    // Originally implemented this with the goal of removing a dupe from the list, then setting the conditional for when the original list is empty. I don't think this will work though. 
-    while (hackbrightStudents !== []) {
-        for (var i = 0; i < hackbrightStudents.length; i++) {
-            if(hackbrightStudents[i] === hackbrightStudents[i + 1]) {
-
-            }
-
-
+    for (var i = 0; i < howLongToIterate; i++) {
+        if(hackbrightStudents[i] === hackbrightStudents[i + 1]) {
+           duplicateStudents.push(hackbrightStudents[i]);
+           i = i + 1;  
         }
     }
 
+    console.log(duplicateStudents);
 
   </script>
 </head>
