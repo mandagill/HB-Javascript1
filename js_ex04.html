@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html>
+<html>
+
+<head>
+  <title>Javascript Learning - exercise 3</title>
+  <script>
+
+  var cat = {
+    tiredness: 20, 
+    hunger: 20, 
+    loneliness: 3, 
+    happiness: 15, 
+    obedience: -5000,
+
+    feed: function () {
+        console.log("Om nom nom");
+        this.hunger = this.hunger - 5;
+        this.happiness = this.happiness + 5;
+        },
+
+    sleep: function () {
+        console.log("zzzzzzzzzz");
+        this.tiredness = this.tiredness - 5;
+        },
+
+    play:  function () {
+        console.log("mmmmmmrrrrrooooowwwwwwww");
+        this.tiredness = this.tiredness + 5;
+        this.happiness = this.happiness + 5;
+        this.obedience = this.obedience + 5000;
+        },
+
+    petTheCat: function () {
+        console.log("purrrrrrrrrrrrrr");
+        this.happiness = this.happiness + 10;
+        this.loneliness = this.loneliness - 10;
+        }
+    }
+
+  console.log(cat);
+
+  </script>
+</head>
+<body>
+    <h1>Javascript Learning - exercise 3</h1>
+</body>
+</html>
+
